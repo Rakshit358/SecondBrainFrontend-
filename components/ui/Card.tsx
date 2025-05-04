@@ -9,7 +9,7 @@ interface CardProps{
 
 export default function Card(props:CardProps){
     return <div>
-        <div className="border border-slate-100 shadow rounded-3xl max-w-72 p-6 font-inter">
+        <div className="border border-slate-200 bg-white shadow rounded-3xl max-w-72 p-6 font-inter">
            <div className="flex justify-between">
                <div className="text-md font-semibold">
                   {props.title}
