@@ -1,4 +1,5 @@
 import Dashboard from "./pages/Dashboard"
+import SharedPage from "./pages/SharedPage";
 import Signin from "./pages/Signin"
 import Signup from "./pages/Signup"
 import { BrowserRouter,Routes,Route } from "react-router-dom"
@@ -9,6 +10,7 @@ function App() {
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/signin" element={<Signin/>}/>
       <Route path="/dashboard" element={<Dashboard/>}/>
+      <Route path="/share/:url" element={<SharedPage />}/>
     </Routes>
   </BrowserRouter>);
 }

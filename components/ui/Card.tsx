@@ -4,7 +4,9 @@ import ShareIcon from "../../src/assets/shareIcon";
 interface CardProps{
     title:string,
     link:string,
-    type:"twitter" | "youtube"
+    type:"twitter" | "youtube",
+    onDelete?: () => void,
+    onGetContext?: () => void
 }
 
 export default function Card(props:CardProps){
@@ -15,12 +17,10 @@ export default function Card(props:CardProps){
                   {props.title}
                </div>
                <div className="flex items-center gap-4">
-                  <button className="cursor-pointer">
-                      <a href={props.link} target="_blank">
+                  <button className="cursor-pointer" onClick={props.onGetContext}>
                         <ShareIcon />
-                      </a>
                   </button>
-                  <button className="cursor-pointer">
+                  <button className="cursor-pointer" onClick={props.onDelete}>
                       <DeleteIcon />
                   </button>
                </div>
